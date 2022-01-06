@@ -1,13 +1,16 @@
-jumlah_angkot = 20;
-jumlah_beroperasi = 19;
-no_angkot = 1;
+// latihan if else
+no_angkot = 1
+jumlah_angkot = 10
+angkotYangBeroperasi = 6
 
-while(no_angkot <= jumlah_beroperasi) {
-    console.log("angkot No. ", no_angkot, " beroperasi dengan baik");
-    no_angkot++;
-}
+for (let index = no_angkot; index <= jumlah_angkot; index++) {
+    
+    if(index === angkotYangBeroperasi){
+        console.log("Angkot No. ", index, " sedang beroperasi dengan baik")
+    } 
+    else {
+        console.log("Angkot No. ", index, " sedang tydak beroperasi")
+    }
 
-for ( no_angkot = jumlah_beroperasi + 1; no_angkot <= jumlah_angkot ; no_angkot++) {
-    console.log("angkot No. ", no_angkot, " sedang tydak beroperasi");
-  
+    
 }
