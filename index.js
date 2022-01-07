@@ -1,22 +1,28 @@
-// latihan else if
-no_angkot = 1
-jumlah_angkot = 10
-angkotYangBeroperasi = 6
-angkotYangLembur1 = 8
-angkotYangLembur2 = 10
-angkotYangLembur3 = 5
+// latihan pengulangan dan pengkondisian bersarang
 
-for (index = no_angkot; index <= jumlah_angkot; index++) {
+// 1.
+// var bintang = "";
+// for ( var index = 0; index < 10; index++) {
 
-    if (index === angkotYangLembur1 || index === angkotYangLembur2 || index === angkotYangLembur3 ) {
-        console.log("Angkot No. ", index, " sedang lembur")
+//     for ( var j = 0; j <= index; j++) {
+//         bintang +="*";
+        
+//     }
+//     bintang +="\n";
     
-    }
-   else if (index <= angkotYangBeroperasi) {
-       console.log("Angkot No. ", index, " sedang beroperasi dengan baik")
-   } 
-  
-    else{
-        console.log("Angkot No. ", index, " sedang tydak beroperasi")
-    }
+// }
+// console.log(bintang);
+
+
+2.
+var bintang = "";
+for ( index = 7; index >= 1; index--) {
+    a = 0;
+
+while(a < index){
+a++
+bintang +="*";
 }
+bintang +="\n";
+    }
+      console.log(bintang);
