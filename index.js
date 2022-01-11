@@ -1,28 +1,60 @@
-// latihan pengulangan dan pengkondisian bersarang
+// program pengelolaan angkot 
 
-// 1.
-// var bintang = "";
-// for ( var index = 0; index < 10; index++) {
-
-//     for ( var j = 0; j <= index; j++) {
-//         bintang +="*";
-        
-//     }
-//     bintang +="\n";
-    
-// }
-// console.log(bintang);
-
-
-2.
-var bintang = "";
-for ( index = 7; index >= 1; index--) {
-    a = 0;
-
-while(a < index){
-a++
-bintang +="*";
-}
-bintang +="\n";
+ // bikin array penumpang
+penumpang = []
+var tambahpenumpang = function (nama_penumpang, penumpang) {
+    // jika kursi kosong tambah penumpang
+    if (penumpang.length == 0) {
+        penumpang.push(nama_penumpang)
+        return penumpang
     }
-      console.log(bintang);
+
+    // jika kursi tidak kosong
+    else{
+    // penelusuran penumpang 
+   for (var i = 0; i <= penumpang.length; i++) {
+
+    // jika kusinya kosong
+       if (penumpang[i] === undefined) {
+        //  tambah penumpang dikursi tersebut
+           penumpang[i] = nama_penumpang
+        //    kembalikan array
+        return penumpang
+       }
+       else if (penumpang[i] == nama_penumpang) {
+        //    pesan kesalahan
+        console.log(nama_penumpang+ ' sudah ada didalam angkot')
+        // kembalikan nilai
+        return penumpang
+       }
+    //   jika seluruh kursi terisi
+    else if(i == penumpang.length-1){
+        penumpang.push(nama_penumpang)
+        return penumpang
+    }
+   }
+}
+}
+
+var hapuspenumpang = function (nama_penumpang, penumpang) {
+    // jika angkot kosong
+    if (penumpang.length == 0) {
+        console.log('tidak ada penumpang didalam angkot')
+        return penumpang
+    }
+    else{
+        for ( index = 0; index < penumpang.length; index++) {
+            if (nama_penumpang == penumpang[index]) {
+                console.log(nama_penumpang, ' turun dari angkot')
+                penumpang[index] = undefined
+                return penumpang
+            }
+          else if (index == penumpang.length - 1) {
+            console.log(nama_penumpang, ' tidak ada di angkot')
+            return penumpang
+          }
+        }
+    }
+}
+    
+
